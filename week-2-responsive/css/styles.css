@@ -19,7 +19,8 @@ h1 {
 .menu-item {
 	border: 1px solid black;
 	background-color: lightgrey;
-  /*margin: 5px;*/
+  margin: 5px;
+  padding: 0px;
 }
 
 #id-idly {
@@ -38,7 +39,7 @@ h1 {
   border-top-width: 0px;
   border-right-width: 0px;
 	text-align: center;
-	margin: unset;
+	margin: 0px; /* unset did not work for IE, so had to make it to 0px */
 	float: right;
 	width: 100px;
 	height: 30px;
@@ -67,7 +68,8 @@ h1 {
     width: 25%;
   }
   .col-lg-4 {
-    width: 33.33%;
+    /* Using calc here is a unhappy way to workaround the box-sizing not considering the margin and without margin it looks yuck :-( */
+    width: calc(33.33% - 15px);
   }
   .col-lg-5 {
     width: 41.66%;
@@ -116,7 +118,7 @@ h1 {
     width: 41.66%;
   }
   .col-md-6 {
-    width: 50%;
+    width: calc(50% - 10px);
   }
   .col-md-7 {
     width: 58.33%;
@@ -134,7 +136,7 @@ h1 {
     width: 91.66%;
   }
   .col-md-12 {
-    width: 100%;
+    width: calc(100% - 10px);
   }
 }
 
@@ -178,6 +180,6 @@ h1 {
     width: 91.66%;
   }
   .col-sm-12 {
-    width: 100%;
+    width: calc(100% - 10px);
   }
  }
