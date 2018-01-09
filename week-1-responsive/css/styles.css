@@ -6,7 +6,8 @@ h1 {
 }
 
 .row {
-	width=100%;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .menu-item {
@@ -27,7 +28,9 @@ h1 {
 
 .menu-header {
 	border: 1px solid black;
-	align-self: right;
+	text-align: center;
+	margin: unset;
+	float: right;
 	width: 100px;
 	height: 30px;
 	font-weight: bold;
